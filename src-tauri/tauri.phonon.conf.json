@@ -1,0 +1,11 @@
+{
+  "productName": "Handy Phonon",
+  "identifier": "com.phonon2.handy",
+  "bundle": {
+    "createUpdaterArtifacts": false,
+    "targets": ["nsis"],
+    "windows": {
+      "signCommand": null
+    }
+  }
+}

@@ -142,10 +142,9 @@ winreg = "0.55"
 # signtool verify entirely. CI pins -DGGML_NATIVE=OFF (see build.yml) so the
 # static build targets a portable ARM baseline, not the build runner's CPU.
 [target.'cfg(all(windows, target_arch = "x86_64"))'.dependencies]
-transcribe-cpp = { version = "0.3.0", default-features = false, features = [
-  "dynamic-backends",
-  "vulkan",
-] }
+# Phonon-2-only build: Whisper/GGUF is never used, so skip the Vulkan GPU
+# backend (no Vulkan SDK needed) and link transcribe-cpp statically like ARM.
+transcribe-cpp = { version = "0.3.0", default-features = false }
 
 [target.'cfg(all(windows, target_arch = "aarch64"))'.dependencies]
 transcribe-cpp = { version = "0.3.0", default-features = false }

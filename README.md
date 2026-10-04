@@ -1,5 +1,11 @@
 # Handy
 
+> [!NOTE]
+> **This is Handy Phonon**, a fork whose only model is [Phonon-2](https://huggingface.co/FermionResearch/Phonon-2)
+> (Fermion Research's low-bit Parakeet TDT 0.6B v3, English). See [PHONON2.md](PHONON2.md) for how the
+> conversion works and how to build it, and the [releases](https://github.com/Arisaya1/Handy-Phonon/releases)
+> for the Windows installer. Everything below is upstream Handy's README.
+
 [![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/invite/WVBeWsNXK4)
 
 **A free, open source, and extensible speech-to-text application that works completely offline.**

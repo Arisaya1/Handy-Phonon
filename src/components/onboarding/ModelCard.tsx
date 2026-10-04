@@ -42,8 +42,12 @@ const getLanguageDisplayText = (
 
 // Legacy = a blob (Url-sourced) .bin/ONNX model, kept runnable but no longer the
 // advertised download (catalog GGUFs supersede it).
+// Phonon-2 is Url-sourced ONNX too, but it's this build's only model.
+export const PHONON2_MODEL_ID = "phonon-2";
 export const isLegacySource = (model: ModelInfo): boolean =>
-  typeof model.source === "object" && "Url" in model.source;
+  model.id !== PHONON2_MODEL_ID &&
+  typeof model.source === "object" &&
+  "Url" in model.source;
 
 // Extract a GGUF quantization label from a filename, if present (e.g. "Q8_0").
 const getQuantLabel = (filename: string): string | null => {

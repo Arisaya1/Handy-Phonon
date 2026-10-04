@@ -28,7 +28,9 @@ const modelSupportsLanguage = (model: ModelInfo, langCode: string): boolean => {
 // the catalog GGUFs. They stay runnable when already on disk, but we no longer
 // advertise the download.
 const isLegacyModel = (model: ModelInfo): boolean =>
-  typeof model.source === "object" && "Url" in model.source;
+  model.id !== "phonon-2" &&
+  typeof model.source === "object" &&
+  "Url" in model.source;
 
 export const ModelsSettings: React.FC = () => {
   const { t } = useTranslation();

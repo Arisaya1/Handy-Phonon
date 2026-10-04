@@ -45,3 +45,11 @@ result
 
 # Python bytecode (scripts/)
 __pycache__/
+
+# Phonon-2 conversion workspace (downloads + build output)
+phonon2/.venv/
+phonon2/phonon2_hf/
+phonon2/base_onnx/
+phonon2/build/
+phonon2/test_audio/
+src-tauri/transcribe-libs/
